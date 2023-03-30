@@ -1,0 +1,21 @@
+{
+
+    "name": "Malcolm Episodeo Aleatorio",
+    "version": "1.0.2",
+    "description": "Script para aleatorizar la seleccion de capitulos en la pagina https://seriesantiguas.com/ver/malcolm-el-de-enmedio/, Github: https://github.com/labrujasiete",
+    "manifest_version": 3,
+    "author": "laBruja team",
+    "action": {
+        "default_popup": "MalcolmScript.html",
+        "default_title": "Malcolm Episodeo Aleatorio" 
+    },
+    
+    "icons": {
+        "16": "labruja_logo_lavanda.png",
+        "32": "labruja_logo_lavanda.png",
+        "48": "labruja_logo_lavanda.png",
+        "128": "labruja_logo_lavanda.png"
+      }
+    
+}
+

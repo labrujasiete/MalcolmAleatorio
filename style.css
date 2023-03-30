@@ -1,74 +1,122 @@
-@font-face{
-    font-family: 'deli';
-    src: url("./DeliciousHandrawn-Regular.ttf");
+/*  BANNERS CONFIGURATION   */
+.malcolmHolder{
+    background-image: url(./images/malcolm.png);
+}
+.sealabHolder{
+    background-image: url(./images/sealab.png);
+}
+.brakHolder{
+    background-image: url(./images/brak.png);
 }
 
 @font-face{
     font-family: 'rubik';
-    src: url("./Rubik-VariableFont_wght.ttf");
+    src: url("./fonts/Rubik-VariableFont_wght.ttf");
+}
+
+html{
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 body{
-    width: 400px;
-    height: 185px;
+    padding: 0;
+    margin: 0;
+    width: 350px;
+    height: auto;
+    overflow: hidden;
     background: rgb(47,148,218);
     background: linear-gradient(143deg, rgba(47,148,218,1) 0%, rgba(0,41,79,1) 100%);
 }
 
-.buttonRandom{
-    box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.32);
-    background-color: #ffffff57;
-    box-sizing: border-box;
-    padding: 13px;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+.topDiv{
+    width: 100%;
+    height: 0;
+}
+
+.holder{
+    width: 350px;
+    height: 130px;
+    transition: .3s;
+    z-index: 999;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.holder:hover{
+    cursor: pointer;
+}
+
+
+.screen{
+    width: 350px;
+    height: 130px;
+    background-color: #00000067;
     transition: .3s;
 }
 
-.buttonRandom:hover{
-    cursor: pointer;
-    box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.5);
-    background-color: #ffffff99;
+.holder:hover .screen{
+    background-color: #00000000;
 }
 
-.buttonRandom:active{
-    cursor: pointer;
-    box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.5);
-    background-color: #00000059;
-}
 
-.pictureIcon{
+
+.stuffHolder{
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 130px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.pictureIcon img{
-    height: 50px;
-    margin-right: 15px;
-    margin-left: 4px;
-}
-
-.buttonTitle{
-    font-family: 'deli';
-    color: #fff;
-    font-size: 2rem;
-}
-
-.extText{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    line-height: 29px;
-    margin-top: 22px;
-    margin-bottom: 20px;
+.serieTitle{
     font-family: 'rubik';
-    color: #fff;
-    font-size: 1.5rem;
+    color: #ffffffe0;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    margin-top: 29px;
+    flex: 1;
+    height: 44px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: .3s;
 }
+
+.holder:hover .serieTitle{
+    color: #fffffff5;
+}
+
+.playHolder{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #0000006e;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.holder:hover .playHolder{
+    background-color: #000000a9;
+}
+.holder:hover .playHolder img{
+    opacity: .7;
+}
+
+.playHolder img{
+    height: 49px;
+    filter: invert(1);
+    opacity: .5;
+    margin-left: 2px;
+    transition: .3s;
+}
+

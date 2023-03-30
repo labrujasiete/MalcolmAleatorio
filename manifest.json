@@ -1,19 +1,21 @@
 {
 
-    "name": "Malcolm Episodeo Aleatorio",
-    "version": "1.0.2",
-    "description": "Script para aleatorizar la seleccion de capitulos en la pagina https://seriesantiguas.com/ver/malcolm-el-de-enmedio/, Github: https://github.com/labrujasiete",
+    "name": "Vird TV Extension",
+    "version": "2.1",
+    "description": "Extencion para chromeOS oficial de VirdTV por LaBruja-Team",
     "manifest_version": 3,
     "author": "laBruja team",
     "action": {
-        "default_popup": "MalcolmScript.html",
-        "default_title": "Malcolm Episodeo Aleatorio" 
+        "default_popup": "popup.html",
+        "default_title": "Vird TV Ext" 
     },
+
     "icons": {
-        "16": "malcIcon.png",
-        "32": "malcIcon.png",
-        "48": "malcIcon.png",
-        "128": "malcIcon.png"
+        "16": "favicon_vird.png",
+        "32": "favicon_vird.png",
+        "48": "favicon_vird.png",
+        "128": "favicon_vird.png"
       }
+    
 }
 

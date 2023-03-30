@@ -153,17 +153,68 @@ const malcolmEps = [
     "https://seriesantiguas.com/episodio/22-graduacion",
 ];
 
-var buttonRand = document.getElementById("buttonRandom");
+const sealabEps = [
+    "http://tus-series-online.blogspot.com/2013/04/laboratorio-submarino-2021-radio-submarina-libre-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/laboratorio-submarino-2021-pastel-feliz-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/laboratorio-submarino-2021-yo-robot-espanol-latino.html",
+    "http://tus-series-online.blogspot.com.ar/2013/04/laboratorio-submarino-2021-la-pareja-perfecta-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/laboratorio-submarino-2021-perdidos-en-el-tiempo-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/laboratorio-submarino-2021-bajo-la-maquina-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/laboratorio-submarino-2021-murphy-murphy-y-la-pandilla-del-feng-shui-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/laboratorio-submarino-2021-atrapados-en-el-armario-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/laboratorio-submarino-2021-estimupastillas-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/laboratorio-submarino-2021-la-poliza-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/laboratorio-submarino-2021-salve-carita-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/laboratorio-submarino-2021-salve-carita-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/laboratorio-submarino-2021-el-golfista-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/laboratorio-submarino-2021-el-apagon-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/laboratorio-submarino-2021-articulo-4-espanol-latino.html",
 
-buttonRand.addEventListener("click", function(){
+];
+
+const brakEps = [
+    "http://tus-series-online.blogspot.com.ar/2013/04/el-show-de-brak-el-nuevo-brak-espanol-latino.html",
+    "http://tus-series-online.blogspot.com.ar/2013/04/el-show-de-brak-enemistad-espanol-latino.html",
+    "http://tus-series-online.blogspot.com.ar/2013/04/el-show-de-brak-fugitivo-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/el-show-de-brak-brak-callejero-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/el-show-de-brak-la-cena-espanol-latino.html",
+    "http://tus-series-online.blogspot.com/2013/04/el-show-de-brak-esquiemos-en-paz-espanol-latino.html",
+];
 
 
-        var episode = malcolmEps[Math.floor(Math.random()*malcolmEps.length)];
-        console.log(episode);
+
+var episode = "";
+var buttonsRand = document.querySelectorAll(".holder");
+
+buttonsRand.forEach(button => {
+    
+    button.addEventListener("click", function(){
+        let serieID = this.querySelector(".playHolder").id;
+
+        switch(serieID){
+            case 'malcolm':
+                episode = malcolmEps[Math.floor(Math.random()*malcolmEps.length)];
+                console.log(episode);
+                break;
+                
+            case 'sealab':
+                episode = sealabEps[Math.floor(Math.random()*sealabEps.length)];
+                console.log(episode);
+                break;
+                
+            case 'brak':
+                episode = brakEps[Math.floor(Math.random()*brakEps.length)];
+                break;
+                
+        }
+
         chrome.tabs.update({ url: episode });
-
-
     });
 
+});
 
+
+
+
+    
 
